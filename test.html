@@ -1,0 +1,280 @@
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+  <script src="./app.js"></script>
+  <script>
+    function getHtml(template) {
+      return template.join('\n');
+    }
+    //listAlbums();
+  </script>
+
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title> 동의서 및 위임장</title>
+<link rel="stylesheet" href="./입주 예정자 협의회 위임장_FILE/stylem.css" type="text/css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>title</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- 화면 캡쳐 CDN -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body style="" id = "capture">
+<script>
+$(function()
+{	
+	$("#shot").on("click", function(){
+	// 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
+	html2canvas(document.querySelector("#capture")).then(canvas =>
+		{
+			saveAs(canvas.toDataURL('image/png'),"위임장.png");
+		});
+	});
+	createAlbum(1234);
+	addPhoto(1234);
+	function saveAs(uri, filename) {
+	// 캡쳐된 파일을 이미지 파일로 내보낸다.
+	var link = document.createElement('a');
+	if (typeof link.download === 'string') {
+		link.href = uri;
+		link.download = filename;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	} 
+	else {
+		window.open(uri);
+	}
+	}
+	});
+</script>
+	
+<script type="text/javascript">
+function onClickToImage(){
+  var myImage = document.getElementById('myImage');
+  myImage.src = canvas.toDataURL();
+}
+</script>
+<link href="./입주 예정자 협의회 위임장_FILE/jquery.signaturepad.css" rel="stylesheet">
+<table>
+<tbody><tr>
+<td valign="top">
+<center><h1>동의서 및 위임장</h1></center><p></p><table width="800" border="0" cellpadding="0" cellspacing="1" bgcolor="#888">
+
+<form enctype="multipart/form-data" id="form1" name="form1" method="post" action=""></form>
+<input type="hidden" name="mode" value="">
+<input type="hidden" name="rcode" value="">
+<input type="hidden" name="gourl" value="">
+
+
+<tbody><tr bgcolor="white"> 
+<td width="30%" height="22" align="center" bgcolor="#87CEEB"><b>예비 입주자 협의회</b></td>
+<td width="70%">전북혁신 대방 디엠시티 오피스텔/아파텔&nbsp;&lt;https://cafe.naver.com/jjthemcity&gt;<input id="toname" name="toname" type="hidden" value="전주 혁신도시 대방 아파트 입주예정자협의회"><input id="tomail" name="tomail" type="hidden" value="max3436@nate.com"><input id="formname" name="formname" type="hidden" value="전주 혁신도시 대방"><font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td width="30%" height="22" align="center" bgcolor="#87CEEB"><b>위임자명</b></td>
+<td width="70%"><input id="name" name="name" type="text" size="10" maxlength="40"> <font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>계약 동 / 호수</b> </td>
+<td><input  name="dong" type="text" size="4" maxlength="4"> 동
+<input name="hosu" type="text" size="4" maxlength="4"> 호
+<font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>전화번호</b></td>
+<td><input name="hp1" type="text" size="4" maxlength="3"> - <input name="hp2" type="text" size="5" maxlength="4"> - <input name="hp3" type="text" size="5" maxlength="4"> <font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>E-mail</b></td>
+<td><input name="email" type="text" size="30" maxlength="50"> <font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>입주자카페 아이디</b></td>
+<td><input name="cafeid" type="text" size="30" maxlength="50"> <font color="red">*</font></td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>입주자카페 닉네임</b></td>
+<td><input name="cafenickname" type="text" size="30" maxlength="50"> <font color="red">*</font></td>
+</tr>
+
+
+
+
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>현 거주지 주소(우편물)</b></td>
+<td><input name="address" type="text" size="50" maxlength="200"> <font color="red">*</font></td>
+</tr>
+
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>동의 사항</b></td>
+<td> 상기 예비입주자는 전주시 덕진구 장동 1111번지 소재 혁신 대방디엠시티 분양계약자(전매자 포함)로서 아래와 같이 동의하고, 그 권한을 위임합니다.
+<br>
+<b>&lt;동의 사항&gt;</b>
+<br>1. 상기 예비입주자협의회를 예비입주자의 권익을 위하여 활동하는 공식 단체로 인정하며, 그 소속원으로서 권리와 의무를 행사할 것을 동의한다. 
+<br>2. 상기 입주자카페를 통한 예비입주자대표단 구성 및 그 대표단에게 입주자의 권리와 이익을 위한 권한을 위임함을 동의한다.
+
+<br>
+<br><b>&lt;위임 사항&gt;</b>
+<br>1. 시행사 및 시공사와 협상(시공, 감리, 개선 등)
+<br>2. 예비 입주자 협의회 대내외 홍보, 활동 및 소통
+<br>3. 예비 입주자 협의회 외부 자문 요청 및 진행
+<br>4. 분양, 건설, 입주, 홍보 등의 모든 제반사항과 관련하여 언론 기관과 모든 행정 기관과 협의나 협상시에 대표자로서 권한
+<br>5. 기타 혁신 대방디엠시티 오피스텔 아파텔 입주자의 권리와 이익에 관련된 모든 행위 일체
+</tr>
+
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#FECBCB"><b>위임인(계약자)서명</b><br></td>
+<td><div class="sigPad" id="smoothed" style="width:404px;">
+<ul class="sigNav" style="display: block;">
+<li class="drawIt"><a href="#draw-it" class="current"></a>서명 패드</a></li>
+<li class="clearButton" style="display: list-item;"><a href="#clear">서명패드 삭제</a></li>
+</ul>
+<div class="sig sigWrapper current" style="height: auto; display: block;">
+<div class="typed" style="display: none;"></div>
+<canvas class="pad" width="400" height="250"></canvas>
+<input type="hidden" name="output" class="output" value="">
+</div>
+</div>
+
+<script src="./입주 예정자 협의회 위임장_FILE/jquery.min.js.다운로드"></script>
+<script src="./입주 예정자 협의회 위임장_FILE/numeric-1.2.6.min.js.다운로드"></script>
+<script src="./입주 예정자 협의회 위임장_FILE/bezier.js.다운로드"></script>
+<script src="./입주 예정자 협의회 위임장_FILE/jquery.signaturepad.js.다운로드"></script>
+<script src="./입주 예정자 협의회 위임장_FILE/json2.min.js.다운로드"></script>
+
+<script>
+$(document).ready(function() {
+$('#smoothed').signaturePad({
+drawOnly:true,
+drawBezierCurves:true,
+lineTop:200
+});
+});
+</script>
+</td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>개인정보수집 및 활용</b></td>
+<td><b>&lt;위임 동의 조건&gt;</b>
+<br>*1. 위임 동의 기간은 작성일로부터 입주 후 정식 관리단 구성 전까지로 한다.
+<br>*2. 예비 입주자 협의회는 본 위임장을 관리하는 직을 만들고, 그 관리자는 본 위임장의 개인정보를 절대 유출하지 않을 것임을 약속한다.
+<br>*3. 위임 기간이 종료되면 모든 위임장 및 개인 정보는 폐기한다.
+<br>
+<br><input name="checkbox1" type="checkbox" value="동의"> 동의 합니다.</td>
+</tr>
+
+<tr bgcolor="white"> 
+<td height="22" align="center" bgcolor="#87CEEB"><b>위임장 제출확인</b></td>
+<td>본인은 <b>전북혁신 대방 디엠시티</b> 입주예정자협의회 대표 및 운영위원에게 상기와 같은 권한을 위임합니다.
+<br><br><input name="checkbox2" type="checkbox" value="동의"> 동의 합니다.</td>
+</tr>
+
+</tbody></table>
+
+<p align="center">
+<button id="shot">제출 하겠습니다</button>
+</p>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<script>
+function form_Check(){
+	/*if(form1.toname.value == ''){
+		alert('수신인 이름을 입력해 주세요.');
+		form1.toname.focus();
+		return;
+	}
+	if(form1.tomail.value == ''){
+		alert('수신인 E-mail주소를 입력해 주세요.');
+		form1.tomail.focus();
+		return;
+	}*/
+	if(form1.name.value == ''){
+		alert('이름을 입력해 주세요.');
+		form1.name.focus();
+		return;
+	}
+
+	if(form1.dong.value == ''){
+		alert('동호수를 입력해 주세요.');
+		form1.dong.focus();
+		return;
+	}
+	if(form1.hosu.value == ''){
+		alert('동호수를 입력해 주세요.');
+		form1.hosu.focus();
+		return;
+	}
+	if(form1.hp1.value == ''){
+		alert('전화번호를 입력해 주세요.');
+		form1.hp1.focus();
+		return;
+	}
+	if(form1.hp2.value == ''){
+		alert('전화번호를 입력해 주세요.');
+		form1.hp2.focus();
+		return;
+	}
+	if(form1.hp3.value == ''){
+		alert('전화번호를 입력해 주세요.');
+		form1.hp3.focus();
+		return;
+	}
+	if(form1.email.value == ''){
+		alert('E-mail 주소를 입력해 주세요.');
+		form1.email.focus();
+		return;
+	}
+	if(form1.cafeid.value == ''){
+		alert('입주자카페 활동아이디를 입력해 주세요.');
+		form1.cafeid.focus();
+		return;
+	}
+	if(form1.cafenickname.value == ''){
+		alert('입주자카페 닉네임을 입력해 주세요.');
+		form1.cafenickname.focus();
+		return;
+	}
+
+	if(form1.address.value == ''){
+		alert('계약자 주소를 입력해 주세요.');
+		form1.address.focus();
+		return;
+	}
+	
+	if(form1.output.value == ''){
+		alert('서명을 해 주세요.');
+		form1.output.focus();
+		return;
+	}
+	if(form1.checkbox1.checked == false){
+		alert('개인정보수집 및 활용 동의를 해주세요.');
+		form1.checkbox1.focus();
+		return;
+	}
+	if(form1.checkbox2.checked == false){
+		alert('위임장 제출확인 동의를 해주세요.');
+		form1.checkbox2.focus();
+		return;
+	}	
+	
+	if(!confirm('위임장을 발송 하겠습니까?')) return;
+	form1.submit();
+}
+</script></body></html>
